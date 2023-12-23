@@ -12,7 +12,7 @@ const ProjectCard = ({ name, description, imageURL, demoURL, sourceURL, tools, s
             <p className="mb-4 row-start-2 col-start-2 self-center">{description}</p>
             <p className="col-span-2 text-sm text-med">Tools Used: &nbsp;{tools}</p>
             <p className="col-span-2 text-sm ">
-                Status: {status} <FontAwesomeIcon icon={faCircle} className={`text-${status}`} />
+                Status:&nbsp;{status}&nbsp;<FontAwesomeIcon icon={faCircle} className={`text-${status}`} />
             </p>
 
             <div className="flex flex-row justify-evenly col-span-2">
@@ -63,6 +63,8 @@ export default function Projects() {
     return (
         <div className="ml-20 mr-20 min-h-screen">
             <p className="text-2xl text-center font-bold p-10">MY PROJECTS</p>
+            <div className=' text-ongoing' hidden>hidden text</div>
+            <div className='text-completed' hidden>hidden text</div>
             <section className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-2">
                 {
                     projectData.map((project, index) => {
